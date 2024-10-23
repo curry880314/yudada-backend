@@ -21,9 +21,9 @@ spring:
   # todo 需替换配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/my_db
+    url: jdbc:mysql://localhost:3306/yudada
     username: root
-    password: stephen30
+    password: 123456
   # Redis 配置
   # todo 需替换配置，然后取消注释
 #  redis:
@@ -74,3 +74,6 @@ knife4j:
         api-rule: package
         api-rule-resources:
           - com.yupi.yudada.controller
+#AI 配置
+ai:
+  apiKey: d636343a99918da300c364db9c909edc.aqYk77p85Vdy3tPc
