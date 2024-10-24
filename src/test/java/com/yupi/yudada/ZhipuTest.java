@@ -5,8 +5,6 @@ package com.yupi.yudada;
  * @since
  */
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.yupi.yudada.utils.KeyConstant;
 import com.zhipu.oapi.ClientV4;
 import com.zhipu.oapi.Constants;
 import com.zhipu.oapi.service.v4.model.ChatCompletionRequest;
@@ -31,10 +29,10 @@ public class ZhipuTest {
     @Test
     public void test(){
         List<ChatMessage> messages = new ArrayList<>();
-        ChatMessage chatMessage = new ChatMessage(ChatMessageRole.USER.value(), "×÷ÎªÒ»ÃûÓªÏú×¨¼Ò£¬ÇëÎªÖÇÆ×¿ª·ÅÆ½Ì¨´´×÷Ò»¸öÎüÒıÈËµÄslogan");
+        ChatMessage chatMessage = new ChatMessage(ChatMessageRole.USER.value(), "ç»™æˆ‘è®²ä¸€ä¸ªå…³äºç¨‹åºå‘˜çš„ç¬‘è¯");
         messages.add(chatMessage);
         ChatCompletionRequest chatCompletionRequest = ChatCompletionRequest.builder()
-                .model(Constants.ModelChatGLM4)
+                .model("glm-4-plus")
                 .stream(Boolean.FALSE)
                 .invokeMethod(Constants.invokeMethod)
                 .messages(messages)
