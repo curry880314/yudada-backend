@@ -20,6 +20,11 @@
         <kotlin.version>2.0.21</kotlin.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>org.java-websocket</groupId>
+            <artifactId>Java-WebSocket</artifactId>
+            <version>1.5.2</version>
+        </dependency>
         <!--智谱AI：https://open.bigmodel.cn/dev/api/devguide/sdk-install  -->
         <dependency>
             <groupId>cn.bigmodel.openapi</groupId>
