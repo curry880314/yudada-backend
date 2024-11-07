@@ -11,8 +11,10 @@ import com.yupi.yudada.constant.UserConstant;
 import com.yupi.yudada.exception.BusinessException;
 import com.yupi.yudada.exception.ThrowUtils;
 import com.yupi.yudada.model.dto.question.*;
+import com.yupi.yudada.model.entity.App;
 import com.yupi.yudada.model.entity.Question;
 import com.yupi.yudada.model.entity.User;
+import com.yupi.yudada.model.enums.AppTypeEnum;
 import com.yupi.yudada.model.vo.QuestionVO;
 import com.yupi.yudada.service.QuestionService;
 import com.yupi.yudada.service.UserService;
@@ -260,6 +262,18 @@ public class QuestionController {
             "title是题目，options是选项，每个选项的key按照英文字母排序（比如：A、B、C、D）以此类推，value是选项值\n" +
             "3、检查题目是否包含序列号，若包含序列号则去除序号\n" +
             "4、返回的题目列表格式必须是 JSON 数组";
+
+
+    private String getGenerateQuestionSysytemMessage(App app, int questionNumber, int optionNumber){
+        StringBuilder userMessage = new StringBuilder();
+        userMessage.append(app.getAppName()).append("\n");
+        userMessage.append(app.getAppDesc()).append("\n");
+        userMessage.append(AppTypeEnum.getEnumByValue(app.getAppType()).getText()+"类").append("\n");
+        userMessage.append(questionNumber).append("\n");
+        userMessage.append(optionNumber);
+        return userMessage.toString();
+    }
+
 
     //endregion
 }

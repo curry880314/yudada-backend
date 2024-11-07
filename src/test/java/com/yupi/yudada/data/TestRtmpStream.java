@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @SpringBootTest
 public class TestRtmpStream {
-    private static final String SERVER_URL = "wss://ip:port/vcs-service/ask?params=";
+    private static final String SERVER_URL = "wss://saasdev.51znyx.com/zyh-service/ask?params=";
     private static final String APP_ID = "testappid";
     private static final String CHANNEL_CODE = "IVR";
     private static final String PHONE_NO = "19802025030";
